@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+
+
+	<link rel="stylesheet" href="build/output.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Doctors Sewa</title>
+
+	<style>
+		.button1 {
+			width: 100px;
+			height: 100px;
+
+			box-shadow: 10px 5px 5px lightgray;
+			color: white;
+
+
+		}
+	</style>
+</head>
+
+<body class="text-gray-800 antialiased">
+
+
+
+
+	<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+				<span class="text-2xl pl-2"><i class="em em-grinning"></i> DOCTORS SEWA</span>
+			</a>
+		</div>
+
+		<div class="block lg:hidden">
+			<button id="nav-toggle"
+				class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+			<ul class="list-reset lg:flex justify-end flex-1 items-center">
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-gray-600  hover:text-gray-200 no-underline hover:text-underline"
+						href="hospitals.html" target="_self">Hospitals</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#labs">Labs</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#qcs">Quarantine Centers</a>
+				</li>
+
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#meds">COVID Packages</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#meds">Medicines</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#oss">Other Supplies</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#pss">Plasma Services</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#osevs">Other Services</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#faq">FAQS</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<main>
+		<div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+			<div class="absolute top-0 w-full h-full bg-center bg-cover"
+				style='background-image: url("img/engin-akyurt-fboaVuIdgzU-unsplash.jpg");'>
+				<span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+			</div>
+			<div class="container relative mx-auto">
+				<div class="items-center flex flex-wrap">
+					<div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+						<div class="pr-12 m-8">
+							<h1 class="text-white font-semibold text-5xl">
+								COVID SEWA.
+							</h1>
+							<p class="mt-4 text-2xl text-gray-300">
+								know about all the information related to Covid19 in Telengana State
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<section class=" hidden invisible  lg:block  pb-20 bg-gray-300 -mt-24">
+			<div class="container sm:invisible md:invisible lg:visible mx-auto px-4">
+				<div class=" sm:invisible md:invisible lg:visible flex flex-wrap">
+					<div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+						<div
+							class="sm:invisible md:invisible lg:visible relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+							<img src="img/stay-home-text-4084144.jpg" alt="">
+						</div>
+					</div>
+					<div class="w-full md:w-4/12 px-4 text-center">
+						<div
+							class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+
+							<img src="img/blue-single-use-medical-face-masks-4197565.jpg" alt="">
+						</div>
+					</div>
+					<div class="pt-6 w-full md:w-4/12 px-4 text-center">
+						<div
+							class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+							<img src="img/tonik-U0wwiY6nRGA-unsplash.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<div class='flex flex-col lg:justify-center lg:items-center w-full  my-8 bg-gray-300 shadow-md'>
+
+			<h1 class='text-indigo-800 underline my-4 ml-2 font-extrabold text-lg'> Some useful links </h1>
+
+			<div class='text-gray-900 font-bold my-4 ml-2'>
+
+				COVID testing procedure.
+
+				<button class="rounded   items-center shadow bg-blue-600 px-4 py-1 text-white hover:bg-blue-400 mx-2 ">
+					<a href="https://www.google.com/" target=" _blank">Click Here</a>
+				</button>
+
+
+
+			</div>
+
+			<div class='text-gray-900 font-bold my-4 ml-2'>
+
+				Breathing Excercise.
+
+				<button
+					class="rounded   items-center shadow bg-green-600 px-4 py-1 text-white hover:bg-green-400 mx-2 ">
+					<a href="https://www.google.com/" target=" _blank">Click Here</a>
+				</button>
+
+
+
+			</div>
+			<div class='text-gray-900 font-bold my-4 ml-2 '>
+
+				Want to talk have a free Doctor Consultation?
+
+				<button
+					class="rounded   items-center shadow bg-purple-600 px-4 py-1 mx-2 text-white hover:bg-purple-400">
+					<a href="https://www.google.com/" target=" _blank">Click Here</a>
+				</button>
+
+
+
+			</div>
+
+		</div>
+
+
+
+
+		<h1 class='text-indigo-800 underline my-4 ml-2  flex justify-center font-extrabold text-lg'> Click below buttons
+			to get detailed
+			list of doctors, labs, facilities etc. </h1>
+
+
+		<div class='  hidden lg:block'>
+
+
+			<section class=' flex justify-around items-center lg:mt-16 mt-4 max-w-screen'>
+
+
+				<div id='cps' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class='hidden lg:block'>
+						<div style="background-image: url('img/bed-empty-equipments-floor-236380.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+
+
+
+
+					<div class="mt-6  hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Hospitals
+						</p>
+						<p class="text-sm text-gray-900 font-hairline  hidden lg:block">
+							All the hospitals that are serving Covid19 patients
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Hospitals
+						</button>
+					</div>
+				</div>
+
+
+
+				<div id='meds' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/person-holding-laboratory-flask-2280571\ \(1\).jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6  hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Labs
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							All the labs that are testing for Covid19
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Labs
+						</button>
+					</div>
+				</div>
+
+				<div id='oss' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/crowd-reflection-color-toy-1679618.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6 hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Quarantine centers
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Quarantine centers that are available for Covid19 patients
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Quarantine centers
+						</button>
+					</div>
+				</div>
+
+			</section>
+
+
+
+			<section class='flex justify-around items-center lg:mt-16  max-w-screen'>
+
+
+				<div id='cps' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class='hidden lg:block'>
+						<div style="background-image: url('img/syringe-and-pills-on-blue-background-3936421.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+
+
+
+
+					<div class="mt-6  hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Covid Packages
+						</p>
+						<p class="text-sm text-gray-900 font-hairline  hidden lg:block">
+							Several Packages that are offered by government and hospitals
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Packages
+						</button>
+					</div>
+				</div>
+
+
+
+				<div id='meds' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/20-mg-label-blister-pack-208512.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6  hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Medicines
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Information about different medicines that are declared for Covid19 patients
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Medicines
+						</button>
+					</div>
+				</div>
+
+				<div id='oss' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/markus-spiske-FDT1Kzp8k-s-unsplash.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6 hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Other Supplies
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Other supplies that are useful to useful to patients
+						</p>
+					</div>
+					<div class="mt-6 flex">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Supplies
+						</button>
+					</div>
+				</div>
+
+			</section>
+
+			<section class='flex justify-around items-center   lg:mt-16  max-w-screen'>
+
+				<div id='plasma' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/crop-unrecognizable-cosmetologist-taking-test-tube-out-of-3985355.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6  hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Plasma Services
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Information and availability of Plasma Services
+						</p>
+					</div>
+					<div class="mt-6">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Plasma
+						</button>
+					</div>
+				</div>
+
+
+
+				<div id='oservs' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/marketing-office-working-business-33999.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6 hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							Other Services
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Services that are available
+						</p>
+					</div>
+					<div class="mt-6">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							Services
+						</button>
+					</div>
+				</div>
+
+				<div id='faq' class="bg-white lg:shadow-2xl p-3 rounded lg:w-64 lg:mx-12 mx-2  my-4">
+					<div class=' hidden lg:block'>
+						<div style="background-image: url('img/ask-blackboard-chalk-board-chalkboard-356079.jpg')"
+							class="bg-cover bg-center bg-gray-300 h-32 rounded">
+						</div>
+					</div>
+					<div class="mt-6 hidden lg:block">
+						<p class="text-lg text-bold tracking-wide text-black mb-2">
+							FAQ
+						</p>
+						<p class="text-sm text-gray-900 font-hairline hidden lg:block">
+							Frequently Asked Questions
+						</p>
+					</div>
+					<div class="mt-6">
+						<button
+							class="rounded  flex items-center shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+							FAQ
+						</button>
+					</div>
+				</div>
+
+			</section>
+		</div>
+
+
+		<div class="ml-2  grid grid-rows-3 gap-6 mt-8 lg:hidden">
+
+			<div class='grid grid-cols-3 gap-0'>
+				<div>
+					<button class='button1  bg-blue-500'>Hospitals</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>Labs</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>Quarantine Centers</button>
+				</div>
+			</div>
+			<div class='grid grid-cols-3'>
+				<div>
+					<button class='button1  bg-blue-500'>COVID Packages</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>Medicines</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>Other Supplies</button>
+				</div>
+			</div>
+			<div class='grid grid-cols-3'>
+				<div>
+					<button class='button1  bg-blue-500'>Plasma Services</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>Other Services</button>
+				</div>
+				<div>
+					<button class='button1  bg-blue-500'>FAQs</button>
+				</div>
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+	</main>
+	<footer class="relative bg-gray-800 pt-12 pb-6 my-12">
+
+		<div class="container mx-auto px-4">
+			<div class="flex flex-wrap justify-center items-center">
+				<div class="  px-4">
+					<h4 class="text-3xl font-semibold text-gray-100">Let's keep in touch!</h4>
+					<h5 class="text-lg mt-0 mb-2 text-gray-100">
+						Find us on any of these platforms
+					</h5>
+					<div class="mt-6">
+						<button
+							class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+							type="button">
+							<i class="fa fa-twitter"></i></button><button
+							class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+							type="button">
+							<i class="fa fa-facebook"></i></button>
+						<button
+							class=" uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded">Contact
+							Us
+						</button>
+
+					</div>
+				</div>
+
+			</div>
+			<hr class="my-6 border-gray-400" />
+			<div class="flex flex-wrap items-center md:justify-between justify-center">
+				<div class="w-full md:w-4/12 px-4 mx-auto text-center">
+					<div class="text-sm text-gray-600 font-semibold py-1">
+						Copyright © 2020 Doctors Sewa
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+<script>
+	document.getElementById('nav-toggle').onclick = function () {
+		document.getElementById("nav-content").classList.toggle("hidden");
+	}
+</script>
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+
+
+	<link rel="stylesheet" href="build/output.css">
+
+	<title>Landing | Tailwind Starter Kit by Creative Tim</title>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+	<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+				<span class="text-2xl pl-2"><i class="em em-grinning"></i> DOCTORS SEWA</span>
+			</a>
+		</div>
+
+		<div class="block lg:hidden">
+			<button id="nav-toggle"
+				class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+			<ul class="list-reset lg:flex justify-end flex-1 items-center">
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-gray-600 no-underline hover:text-gray-200"
+						href="#hospitals">Hospitals</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#labs">Labs</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#qcs">Quarantine Centers</a>
+				</li>
+
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#meds">COVID Packages</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#meds">Medicines</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#oss">Other Supplies</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#pss">Plasma Services</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#osevs">Other Services</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+						href="#faq">FAQS</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class='relative pt-32 '>
+		<div class='text-center text-black text-2xl underline'> Hospitals</div>
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> GHMC
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="ghmc" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Corporate
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="corporate" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!-- <div class='text-left text-black text-xl '> Corporate</div>
+		<div id="corporate"></div> -->
+
+
+	</div>
+
+	<footer class="relative bg-gray-800 pt-12 pb-6 my-12">
+
+		<div class="container mx-auto px-4">
+			<div class="flex flex-wrap justify-center items-center">
+				<div class="  px-4">
+					<h4 class="text-3xl font-semibold text-gray-100">Let's keep in touch!</h4>
+					<h5 class="text-lg mt-0 mb-2 text-gray-100">
+						Find us on any of these platforms
+					</h5>
+					<div class="mt-6">
+						<button
+							class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+							type="button">
+							<i class="fa fa-twitter"></i></button><button
+							class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+							type="button">
+							<i class="fa fa-facebook"></i></button>
+						<button
+							class=" uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded">Contact
+							Us
+						</button>
+
+					</div>
+				</div>
+
+			</div>
+			<hr class="my-6 border-gray-400" />
+			<div class="flex flex-wrap items-center md:justify-between justify-center">
+				<div class="w-full md:w-4/12 px-4 mx-auto text-center">
+					<div class="text-sm text-gray-600 font-semibold py-1">
+						Copyright © 2020 Doctors Sewa
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		function ghmc(arr) {
+
+			myFunction(arr, 'ghmc');
+
+
+		}
+
+		function corp(arr) {
+
+			myFunction(arr, 'corporate');
+
+		}
+
+
+		// function myFunction1(arr, division) {
+		// 	var out = "";
+		// 	var i;
+		// 	for (i = 0; i < arr.length; i++) {
+
+		// 		console.log(evenOrOdd(i));
+
+		// 		let bg;
+
+
+		// 		if (evenOrOdd(i)) {
+		// 			bg = ' bg-blue-300';
+		// 		} else {
+		// 			bg = ' bg-blue-200';
+		// 		}
+
+
+
+
+
+		// 		out +=
+
+		// 			"<tr>" +
+		// 			"<td class='w-1/3 text-left py-3 px-4'>" +
+		// 			arr[i].name +
+		// 			"</td>" +
+		// 			"</tr>"
+
+
+
+
+
+
+
+		// 		document.getElementById(division).innerHTML = out;
+
+
+		// 	}
+
+		// };
+
+
+
+
+		function myFunction(arr, division) {
+			var out = "";
+			var i;
+			for (i = 0; i < arr.length; i++) {
+
+				console.log(evenOrOdd(i));
+
+				let bg;
+
+
+				if (evenOrOdd(i)) {
+					bg = ' bg-gray-300';
+				} else {
+					bg = ' bg-gray-200';
+				}
+
+				console.log("<div class='flex flex-col justify-center items-center" + bg + "'>");
+
+				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
+					bg +
+					" p-4  rounded-lg my-1 mx-2'>" +
+					"<div class='flex'>" + arr[i].name + "</div>" +
+					"<div class='flex'>" + arr[i].phone + "</div>" +
+					"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
+					"</div>";
+				document.getElementById(division).innerHTML = out;
+
+
+			}
+
+		};
+
+		function evenOrOdd(num) {
+
+			if (num % 2 == 0) {
+				return true;
+			} else {
+				return false;
+			}
+
+		}
+	</script>
+
+
+
+	<!-- <div class="flex flex-col justify-center items-center md:table w-full">
+					<div class="flex md:table-row-group">
+						<div class="md:table-row">
+							<div class="md:table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more
+								content</div>
+							<div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 2</div>
+							<div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Cell 3</div>
+						</div>
+						<div class="table-row">
+							<div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 4</div>
+							<div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more content
+							</div>
+							<div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 6</div>
+						</div>
+					</div>
+				</div> -->
+
+
+
+
+
+
+	<script>
+		document.getElementById('nav-toggle').onclick = function () {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script>
+	<script src="sample.js"></script>
+
+
+</body>
+
+</html>
