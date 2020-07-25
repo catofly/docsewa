@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="build/output.css">
 
-	<title>Hospitals</title>
+	<title>Labs</title>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -82,7 +82,7 @@
 
 
 	<div class='relative pt-32 '>
-		<div class='text-center text-black text-2xl underline'> Hospitals</div>
+		<div class='text-center text-black text-2xl underline'> Labs</div>
 		<div x-data="{ isOpen: true }">
 
 			<div class='text-left text-black text-xl m-4 '> GHMC
@@ -117,9 +117,41 @@
 			</div>
 		</div>
 
+		<div x-data="{ isOpen: true }">
 
-		<!-- <div class='text-left text-black text-xl '> Corporate</div>
-		<div id="corporate"></div> -->
+			<div class='text-left text-black text-xl m-4 '> At Home Services
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="athome" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Districts
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="dists" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+
 
 
 	</div>
@@ -175,6 +207,17 @@
 
 		}
 
+		function athome(arr) {
+
+			myFunction(arr, 'athome');
+
+		}
+
+		function dists(arr) {
+			myFunction(arr, 'dists');
+
+		}
+
 
 
 
@@ -199,16 +242,48 @@
 
 
 
+
+
+
 				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
 					bg +
 					" p-4  rounded-lg my-1 mx-2'>" +
-					"<div class='flex'>" + arr[i].name + "</div>" +
-					"<div class='flex'>" +
-					"<a href='tel:" + arr[i].phone + "'>" +
-					arr[i].phone + "</a>" +
+
+					"<div class='flex'>" + arr[i].name +
 					"</div>" +
-					"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
+
+					"<div class='flex'>" + arr[i].addr +
+					"</div>" +
+
+
+
+					"<div class='flex'>" +
+					"<a href='tel:" +
+					arr[i].phone +
+					"'>" +
+					arr[i].phone +
+					"</a>" +
+					"</div>" +
+
+					"<div class='flex'>" +
+					"<a href='" +
+					arr[i].website +
+					"'>" +
+					arr[i].website +
+					"</a>" +
+					"</div>" +
+
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr1 +
+					"</div>" +
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr2 +
+					"</div>" +
 					"</div>";
+
+
 				document.getElementById(division).innerHTML = out;
 
 
@@ -232,7 +307,7 @@
 			document.getElementById("nav-content").classList.toggle("hidden");
 		}
 	</script>
-	<script src="sample.js"></script>
+	<script src="labs.js"></script>
 
 
 </body>
