@@ -77,6 +77,10 @@
 		</div>
 	</nav>
 
+
+
+
+
 	<div class='relative pt-32 '>
 		<div class='text-center text-black text-2xl underline'> Hospitals</div>
 		<div x-data="{ isOpen: true }">
@@ -232,13 +236,25 @@
 					bg = ' bg-gray-200';
 				}
 
-				console.log("<div class='flex flex-col justify-center items-center" + bg + "'>");
+				console.log("<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
+					bg +
+					" p-4  rounded-lg my-1 mx-2'>" +
+					"<div class='flex'>" + arr[i].name + "</div>" +
+					"<div class='flex'>" +
+					"<a href='tel:" + arr[i].phone + "'>" +
+					arr[i].phone + "</a>" +
+					"</div>" +
+					"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
+					"</div>");
 
 				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
 					bg +
 					" p-4  rounded-lg my-1 mx-2'>" +
 					"<div class='flex'>" + arr[i].name + "</div>" +
-					"<div class='flex'>" + arr[i].phone + "</div>" +
+					"<div class='flex'>" +
+					"<a href='tel:" + arr[i].phone + "'>" +
+					arr[i].phone + "</a>" +
+					"</div>" +
 					"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
 					"</div>";
 				document.getElementById(division).innerHTML = out;
