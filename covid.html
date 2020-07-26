@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+
+
+	<link rel="stylesheet" href="build/output.css">
+
+	<title>Labs</title>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+	</script>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+</head>
+
+
+<body>
+
+
+	<div id="header"></div>
+
+
+
+	<div class='relative pt-48'>
+		<div class='text-center text-black text-2xl underline'> Covid Packages </div>
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Hyderabad
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="Hyderabad" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Other Districts
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="OtherDistricts" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+	<script>
+		function Hyderabad(arr) {
+
+			myFunction(arr, 'Hyderabad');
+
+
+		}
+
+		function OtherDistricts(arr) {
+
+			myFunction(arr, 'OtherDistricts');
+
+		}
+
+
+
+
+
+
+
+
+
+		function myFunction(arr, division) {
+			var out = "";
+			var i;
+			for (i = 0; i < arr.length; i++) {
+
+				console.log(evenOrOdd(i));
+
+				let bg;
+
+
+				if (evenOrOdd(i)) {
+					bg = ' bg-gray-300';
+				} else {
+					bg = ' bg-gray-200';
+				}
+
+
+
+
+
+
+				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
+					bg +
+					" p-4  rounded-lg my-1 mx-2'>" +
+
+					"<div class='flex'>" + arr[i].provider +
+					"</div>" +
+
+					"<div class='flex'>" + arr[i].pkgname +
+					"</div>" +
+
+
+
+					"<div class='flex'>" +
+					"<a href='tel:" +
+					arr[i].phone +
+					"'>" +
+					arr[i].phone +
+					"</a>" +
+					"</div>" +
+
+					"<div class='flex'>" +
+					"<a href='" +
+					arr[i].website +
+					"'>" +
+					arr[i].website +
+					"</a>" +
+					"</div>" +
+
+
+
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr1 +
+					"</div>" +
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr2 +
+					"</div>" +
+					"</div>";
+
+				console.log(out);
+				document.getElementById(division).innerHTML = out;
+
+
+			}
+
+		};
+
+		function evenOrOdd(num) {
+
+			if (num % 2 == 0) {
+				return true;
+			} else {
+				return false;
+			}
+
+		}
+	</script>
+
+	<!-- <script>
+		document.getElementById('nav-toggle').onclick = function () {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script> -->
+	<script src="data/covidpackages.js"></script>
+
+
+
+</body>
+
+</html>
