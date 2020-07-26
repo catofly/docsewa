@@ -32,11 +32,11 @@
 
 
 
-	<div class='relative pt-32 '>
-		<div class='text-center text-black text-2xl underline'> Labs</div>
+	<div class='relative pt-48'>
+		<div class='text-center text-black text-2xl underline'> Masks And Other Supplies</div>
 		<div x-data="{ isOpen: true }">
 
-			<div class='text-left text-black text-xl m-4 '> GHMC
+			<div class='text-left text-black text-xl m-4 '> Plymasks
 
 				<span class='flex justify-end'>
 					<button x-on:click=" isOpen = !isOpen"
@@ -45,7 +45,7 @@
 			</div>
 			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
 
-				<div id="ghmc" class='flex flex-wrap  w-screen md:w-full'>
+				<div id="plymasks" class='flex flex-wrap  w-screen md:w-full'>
 
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 
 		<div x-data="{ isOpen: true }">
 
-			<div class='text-left text-black text-xl m-4 '> Corporate
+			<div class='text-left text-black text-xl m-4 '> n95 masks
 
 				<span class='flex justify-end'>
 					<button x-on:click=" isOpen = !isOpen"
@@ -62,7 +62,7 @@
 			</div>
 			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
 
-				<div id="corporate" class='flex flex-wrap  w-screen md:w-full'>
+				<div id="n95masks" class='flex flex-wrap  w-screen md:w-full'>
 
 				</div>
 			</div>
@@ -70,7 +70,7 @@
 
 		<div x-data="{ isOpen: true }">
 
-			<div class='text-left text-black text-xl m-4 '> At Home Services
+			<div class='text-left text-black text-xl m-4 '> sanitizers
 
 				<span class='flex justify-end'>
 					<button x-on:click=" isOpen = !isOpen"
@@ -79,7 +79,7 @@
 			</div>
 			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
 
-				<div id="athome" class='flex flex-wrap  w-screen md:w-full'>
+				<div id="sanitizers" class='flex flex-wrap  w-screen md:w-full'>
 
 				</div>
 			</div>
@@ -87,7 +87,7 @@
 
 		<div x-data="{ isOpen: true }">
 
-			<div class='text-left text-black text-xl m-4 '> Districts
+			<div class='text-left text-black text-xl m-4 '> Gloves
 
 				<span class='flex justify-end'>
 					<button x-on:click=" isOpen = !isOpen"
@@ -96,46 +96,135 @@
 			</div>
 			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
 
-				<div id="dists" class='flex flex-wrap  w-screen md:w-full'>
+				<div id="gloves" class='flex flex-wrap  w-screen md:w-full'>
 
 				</div>
 			</div>
 		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Gloves
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="gloves" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Oximeters
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="oximeters" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Thermometers
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="thermometers" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Others
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="others" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
 
 
 
 
 	</div>
 
+
+
+
+
 	<div id="footer"></div>
 	<script>
-		function ghmc(arr) {
+		function others(arr) {
 
-			myFunction(arr, 'ghmc');
+			myFunction(arr, 'others');
 
 
 		}
 
-		function corp(arr) {
+		function plymasks(arr) {
 
-			myFunction(arr, 'corporate');
-
-		}
-
-		function athome(arr) {
-
-			myFunction(arr, 'athome');
+			myFunction(arr, 'plymasks');
 
 		}
 
-		function dists(arr) {
-			myFunction(arr, 'dists');
+		function n95masks(arr) {
+
+			myFunction(arr, 'n95masks');
 
 		}
 
+		function sanitizers(arr) {
 
+			myFunction(arr, 'sanitizers');
 
+		}
 
+		function gloves(arr) {
+
+			myFunction(arr, 'gloves');
+
+		}
+
+		function oximeters(arr) {
+
+			myFunction(arr, 'oximeters');
+
+		}
+
+		function thermometers(arr) {
+
+			myFunction(arr, 'thermometers');
+
+		}
 
 
 
@@ -155,11 +244,6 @@
 					bg = ' bg-gray-200';
 				}
 
-
-
-
-
-
 				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
 					bg +
 					" p-4  rounded-lg my-1 mx-2'>" +
@@ -167,10 +251,11 @@
 					"<div class='flex'>" + arr[i].name +
 					"</div>" +
 
-					"<div class='flex'>" + arr[i].addr +
+					"<div class='flex'>" + arr[i].pname +
 					"</div>" +
 
-
+					"<div class='flex'>" + arr[i].ctname +
+					"</div>" +
 
 					"<div class='flex'>" +
 					"<a href='tel:" +
@@ -180,11 +265,12 @@
 					"</a>" +
 					"</div>" +
 
+
 					"<div class='flex'>" +
 					"<a href='" +
-					arr[i].website +
+					arr[i].url +
 					"'>" +
-					arr[i].website +
+					arr[i].url +
 					"</a>" +
 					"</div>" +
 
@@ -198,7 +284,7 @@
 					"</div>" +
 					"</div>";
 
-
+				console.log(out);
 				document.getElementById(division).innerHTML = out;
 
 
@@ -217,12 +303,13 @@
 		}
 	</script>
 
-	<script>
+	<!-- <script>
 		document.getElementById('nav-toggle').onclick = function () {
 			document.getElementById("nav-content").classList.toggle("hidden");
 		}
-	</script>
-	<script src="data/labs.js"></script>
+	</script> -->
+	<script src="data/masksothers.js"></script>
+
 
 
 </body>

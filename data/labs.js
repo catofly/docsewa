@@ -7,6 +7,14 @@ ghmc([{
 		"attr2": "At Home sample collection available"
 	},
 	{
+		"name": "Osmania",
+		"addr": "Himayath Nagar",
+		"phone": "+91 62816 51144",
+		"website": "",
+		"attr1": "RT-PCR, Chest-CT, Swab, Blood Sample",
+		"attr2": "At Home sample collection available"
+	},
+	{
 		"name": "King Kothi",
 		"addr": "Himayath Nagar",
 		"phone": "+91 62816 51144",
