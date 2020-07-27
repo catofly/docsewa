@@ -152,25 +152,23 @@
 					"<div class='flex'>" + arr[i].name +
 					"</div>" +
 
-					"<div class='flex'>" +
-					"<a href='" +
-					arr[i].url +
-					"'>" +
-					arr[i].url +
+					"<div class='flex m-2'>" +
+					"<a  class =' fa fa-external-link text-blue-700 underline' href='" +
+					arr[i].url + "'" + " target ='_blank'" +
+					"'>" + " " +
+					arr[i].name +
 					"</a>" +
 					"</div>" +
 
 
 
-					"<div class='flex bg-blue-200 shadow-lg p-2 m-1'>" +
-					"<a  class='fa fa-phone' href='tel:" +
+					"<div class='flex '>" +
+					"<a  href='tel:" +
 					arr[i].phone +
 					"'>" +
-					"<span >" + " " + arr[i].name + "</span>" +
+					arr[i].phone +
 
-					// "<span class='bg-blue-700 p-4'" +
-					// arr[i].name +
-					// "</span>"
+
 					"</a>" +
 
 					"</div>" +
@@ -190,7 +188,7 @@
 					"</div>";
 
 
-				console.log(out);
+				// console.log(out);
 
 				document.getElementById(division).innerHTML = out;
 
