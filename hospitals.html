@@ -7,7 +7,7 @@
 	<meta name="theme-color" content="#000000" />
 
 
-	<link rel="stylesheet" href="build/out.min.css">
+	<link rel="stylesheet" href="build/output.css">
 
 	<title>Hospitals</title>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -65,6 +65,23 @@
 			</div>
 		</div>
 
+		<div x-data="{ isOpen: true }">
+
+			<div class='text-left text-black text-xl m-4 '> Other Districts
+
+				<span class='flex justify-end'>
+					<button x-on:click=" isOpen = !isOpen"
+						class='bg-blue-600 px-2 border-blue-900 shadow-lg text-white'>Show / Hide</button>
+				</span>
+			</div>
+			<div x-show="isOpen" class='flex flex-col w-auto md:ml-6 '>
+
+				<div id="otherdistricts" class='flex flex-wrap  w-screen md:w-full'>
+
+				</div>
+			</div>
+		</div>
+
 
 		<!-- <div class='text-left text-black text-xl '> Corporate</div>
 		<div id="corporate"></div> -->
@@ -84,6 +101,12 @@
 		function corp(arr) {
 
 			myFunction(arr, 'corporate');
+
+		}
+
+		function otherdistricts(arr) {
+
+			myFunction(arr, 'otherdistricts');
 
 		}
 
@@ -111,16 +134,64 @@
 
 
 
+				// out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
+				// 	bg +
+				// 	" p-4  rounded-lg my-1 mx-2'>" +
+				// 	"<div class='flex'>" + arr[i].name + "</div>" +
+				// 	"<div class='flex'>" +
+				// 	"<a href='tel:" + arr[i].phone + "'>" +
+				// 	arr[i].phone + "</a>" +
+				// 	"</div>" +
+				// 	"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
+				// 	"</div>";
+
 				out += "<div class='flex flex-col  justify-center items-center w-screen md:w-auto  md:px-16 " +
 					bg +
 					" p-4  rounded-lg my-1 mx-2'>" +
-					"<div class='flex'>" + arr[i].name + "</div>" +
-					"<div class='flex'>" +
-					"<a href='tel:" + arr[i].phone + "'>" +
-					arr[i].phone + "</a>" +
+
+					"<div class='flex'>" + arr[i].name +
 					"</div>" +
-					"<div class='flex break-words px-1' justify-around >" + arr[i].email + "</div>" +
+
+					"<div class='flex'>" +
+					"<a href='" +
+					arr[i].url +
+					"'>" +
+					arr[i].url +
+					"</a>" +
+					"</div>" +
+
+
+
+					"<div class='flex bg-blue-200 shadow-lg p-2 m-1'>" +
+					"<a  class='fa fa-phone' href='tel:" +
+					arr[i].phone +
+					"'>" +
+					"<span >" + " " + arr[i].name + "</span>" +
+
+					// "<span class='bg-blue-700 p-4'" +
+					// arr[i].name +
+					// "</span>"
+					"</a>" +
+
+					"</div>" +
+
+
+					"<div class='flex'>" + arr[i].email +
+					"</div>" +
+
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr1 +
+					"</div>" +
+
+					"<div class='flex break-words px-1'>" +
+					arr[i].attr2 +
+					"</div>" +
 					"</div>";
+
+
+				console.log(out);
+
 				document.getElementById(division).innerHTML = out;
 
 
